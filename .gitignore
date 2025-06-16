@@ -1,0 +1,7 @@
+
+*.pyc
+__pycache__/
+.env
+SYOS_Logs/
+*.db
+*.bak
