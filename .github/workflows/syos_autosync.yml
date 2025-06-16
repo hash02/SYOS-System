@@ -15,3 +15,7 @@ jobs:
   echo "✅ SYOS Autosync executed."
 
       - name: Commit changes
+- name: Commit changes
+  run: echo "🔁 (placeholder) Commit logic not yet added."
+
+  
