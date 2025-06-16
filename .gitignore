@@ -2,6 +2,6 @@
 *.pyc
 __pycache__/
 .env
-SYOS_Logs/
+!SYOS_Logs/echo_memory.csv
 *.db
 *.bak
