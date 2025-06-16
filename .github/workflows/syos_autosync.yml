@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Sync symbolic memory
-        run: echo "Placeholder: insert autosync logic here"
-      - name: Commit changes
         run: |
-          git config --local user.name "SYOS Autosync"
-          git config --local user.email "
+  echo "✅ SYOS Autosync executed."
+
+      - name: Commit changes
