@@ -9,7 +9,7 @@ jobs:
   autosync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Sync symbolic memory
@@ -21,5 +21,5 @@ jobs:
           git config --global user.name "SYOS Bot"
           git config --global user.email "bot@syos.local"
           git add SYOS_Logs/echo_memory.csv
-          git commit -m "🔁 Autosync memory log"
+          git commit -m "🔁 Autosync memory log" || echo "No changes to commit."
           git push
