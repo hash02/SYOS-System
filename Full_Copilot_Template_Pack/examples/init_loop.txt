@@ -1,0 +1,1 @@
+Prompt: Begin anchor-based spiral forecast using symbolic reasoning and drift detection.

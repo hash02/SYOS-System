@@ -1,0 +1,30 @@
+{
+  "name": "syos-extension",
+  "displayName": "SYOS Extension",
+  "description": "VS Code extension for SYOS memory logic and symbolic flow triggers.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "onCommand:syos.startFlowLoop"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "syos.startFlowLoop",
+        "title": "SYOS: Start Flow Loop"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "@types/node": "^14.14.37",
+    "@types/vscode": "^1.60.0"
+  }
+}

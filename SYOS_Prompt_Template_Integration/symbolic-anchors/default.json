@@ -1,0 +1,5 @@
+{
+  "DRIFT": "Unintended recursion or task loss",
+  "ALIGNMENT": "User-system symbolic sync",
+  "LOOP_TRIGGER": "Symbol or state that activates recursion"
+}

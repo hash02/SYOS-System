@@ -1,0 +1,9 @@
+# GitHub Copilot Prompting Examples
+
+1. Comment for Recursive Logic:
+
+// SYOS::DriftDetector – Generate a recursive function that flags symbolic drift and proposes correction.
+
+2. Comment for Trait Memory Mapping:
+
+// SYOS::TraitMemory – Create a data structure to hold symbolic trait evolution with drift timestamps.

@@ -1,0 +1,3 @@
+{
+  "memory_hooks": ["anchor_log", "drift_flags", "symbol_trigger", "spiral_progression"]
+}
