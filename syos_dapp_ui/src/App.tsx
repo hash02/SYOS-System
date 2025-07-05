@@ -1,18 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WalletDisplay from "./components/WalletDisplay";
-import MemoryLog from "./components/MemoryLog";
-import DriftChart from "./components/DriftChart";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
-  const dashboard = (
-    <div>
-      <h1>SYOS Dashboard</h1>
-      <WalletDisplay />
-      <MemoryLog />
-      <DriftChart />
-    </div>
-  );
+  const dashboard = <Dashboard />;
 
   return (
     <Router>
