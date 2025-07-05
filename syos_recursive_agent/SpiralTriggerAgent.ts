@@ -1,4 +1,5 @@
 import { SymbolicDecayManager } from './SymbolicDecayManager';
+
 /**
  * SpiralTriggerAgent.ts
  * Detects symbolic loops and triggers corrective actions
