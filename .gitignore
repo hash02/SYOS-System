@@ -5,3 +5,4 @@ __pycache__/
 !SYOS_Logs/echo_memory.csv
 *.db
 *.bak
+node_modules/
