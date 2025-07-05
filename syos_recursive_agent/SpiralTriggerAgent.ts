@@ -66,6 +66,9 @@ export class SpiralTriggerAgent {
 
   runSpiral(): void {
     this.logger("[SpiralTriggerAgent] Starting spiral loop detection and correction...");
+const decayManager = new SymbolicDecayManager(this.memory);
+decayManager.applyDecay(0.5); // Decay rate can be adjusted
+this.logger("Applied symbolic decay before loop detection.");
     if (this.detectLoops(this.memory)) {
       this.correctDrift();
     } else {
