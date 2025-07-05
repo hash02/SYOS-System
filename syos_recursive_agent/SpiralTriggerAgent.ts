@@ -1,4 +1,4 @@
-import { SymbolicDecayManager } from './SymbolicDecayManager';
+import { SymbolicDecayManager } from "./SymbolicDecayManager";
 
 /**
  * SpiralTriggerAgent.ts
