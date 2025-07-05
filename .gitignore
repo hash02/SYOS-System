@@ -5,3 +5,7 @@ __pycache__/
 !SYOS_Logs/echo_memory.csv
 *.db
 *.bak
+
+# syos_dapp_ui artifacts
+syos_dapp_ui/node_modules/
+syos_dapp_ui/dist/

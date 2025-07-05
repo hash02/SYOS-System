@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ethers } from 'ethers';
 
 export default function Wallet() {
   const [account, setAccount] = useState<string | null>(null);
@@ -11,6 +10,10 @@ export default function Wallet() {
     }
   }
 
+  function disconnect() {
+    setAccount(null);
+  }
+
   useEffect(() => {
     if (window.ethereum) {
       connect();
@@ -20,7 +23,14 @@ export default function Wallet() {
   return (
     <div>
       <h2>Wallet</h2>
-      <p>Connected: {account ? account : 'Not Connected'}</p>
+      {account ? (
+        <>
+          <p>Connected: {account}</p>
+          <button onClick={disconnect}>Disconnect</button>
+        </>
+      ) : (
+        <button onClick={connect}>Connect Wallet</button>
+      )}
     </div>
   );
 }
