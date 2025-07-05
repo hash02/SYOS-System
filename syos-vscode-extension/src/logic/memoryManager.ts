@@ -1,3 +1,5 @@
+import * as vscode from 'vscode';
+
 export async function getSymbolicPrompt(): Promise<string> {
   const prompts = [
     "SYOS: What do I almost say but don’t?",
