@@ -24,12 +24,16 @@ const App = () => {
   }, []);
 
   const dashboard = (
-    <div className="bg-base text-white min-h-screen px-8 py-6">
-      <h1 className="text-4xl font-bold text-anchor">SYOS Dashboard</h1>
-      <WalletDisplay />
-      <MemoryLog />
-      <DriftChart />
-      <PriceChart data={btcHistory} />
+    <div className="bg-background text-neon font-orbitron min-h-screen p-4 md:p-8">
+      <h1 className="text-4xl font-bold text-accent mb-4">SYOS Dashboard</h1>
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="md:col-span-2">
+          <WalletDisplay />
+        </div>
+        <MemoryLog />
+        <DriftChart />
+        <PriceChart data={btcHistory} />
+      </div>
     </div>
   );
 

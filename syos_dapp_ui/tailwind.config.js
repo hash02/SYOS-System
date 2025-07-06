@@ -3,16 +3,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        neon: ['Orbitron', 'sans-serif'],
+        orbitron: ['Orbitron', 'sans-serif'],
       },
       colors: {
-        anchor: '#5F4B8B',
-        drift: '#FF6B6B',
-        base: '#101010',
-        neon: '#39FF14',
-        bgDark: '#0a0a0a',
-        card: '#1f1f1f',
-        accent: '#00FFF7',
+        neon: '#00ffff',
+        background: '#0d0d0d',
+        card: '#1a1a1a',
+        accent: '#ff00ff',
+        trade: '#00ff6a',
+        drift: '#ff4545',
       },
     },
   },
