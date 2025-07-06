@@ -55,3 +55,15 @@ Then access endpoints like `http://localhost:3000/api/drift`.
 ```bash
 git checkout -b feature/wallet-integration
 ```
+
+## Production Deployment
+
+Merges to `main` automatically deploy to Vercel using the `Deploy to Vercel` workflow.
+Add these repository secrets so the workflow can authenticate:
+
+- `VERCEL_TOKEN` – Vercel access token
+- `VERCEL_ORG_ID` – organization ID
+- `VERCEL_PROJECT_ID` – project ID for the dashboard
+
+Once configured, pushes to `main` redeploy https://syos-system-fin.vercel.app.
+
