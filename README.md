@@ -23,6 +23,10 @@ npm install        # install dependencies
 npm run dev        # start the Vite dev server at http://localhost:5173
 ```
 
+> **Note**: Run `npm install` in `syos_dapp_ui` before executing `npm run dev` or
+> `npm run build`. Vite is the build tool used by this project and is included in
+> the `devDependencies` section of `package.json`.
+
 ### Serverless functions
 
 Functions placed in `syos_dapp_ui/api` are deployed on Vercel under `/api/*`. To test them locally you can use the Vercel CLI:
