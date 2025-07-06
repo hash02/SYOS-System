@@ -8,7 +8,7 @@ import ChartComponent from "./components/ChartComponent";
 const App = () => {
 
   const dashboard = (
-    <div className="bg-background text-neon font-orbitron min-h-screen p-4 md:p-8">
+    <div className="dark bg-background text-neon font-orbitron min-h-screen p-4 md:p-8">
       <h1 className="text-4xl font-bold text-accent mb-4">SYOS Dashboard</h1>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="md:col-span-2">
