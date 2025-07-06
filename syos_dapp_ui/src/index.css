@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-background: #0d0d0d;
+  --color-neon: #00ffff;
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: var(--color-background);
+  }
+}
+
 body {
-  @apply bg-background text-neon font-orbitron;
+  background-color: var(--color-background);
+  color: var(--color-neon);
+  font-family: 'Orbitron', sans-serif;
 }
