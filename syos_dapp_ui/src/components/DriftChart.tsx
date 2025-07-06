@@ -1,63 +1,29 @@
 import { useEffect, useState } from "react";
 
-interface DriftData {
-  price: number;
-  predicted: number;
-  confidence: number;
-  anchors: string[];
-}
-
-function useDriftData() {
-  const [data, setData] = useState<DriftData | null>(null);
-
-  useEffect(() => {
-    let active = true;
-
-    const fetchDrift = async () => {
-      try {
-        const res = await fetch("/api/drift");
-        if (!res.ok) {
-          throw new Error(`HTTP ${res.status}`);
-        }
-        const json = await res.json();
-        if (active) {
-          setData(json);
-        }
-      } catch (err) {
-        console.error("Failed to fetch drift data", err);
-      }
-    };
-
-    fetchDrift();
-    const interval = setInterval(fetchDrift, 10000);
-    return () => {
-      active = false;
-      clearInterval(interval);
-    };
-  }, []);
-
-  return data;
+interface Point {
+  time: string;
+  value: number;
 }
 
 export default function DriftChart() {
-  const data = useDriftData();
+  const [chartData, setChartData] = useState<Point[]>([]);
 
-  if (!data) {
-    return (
-      <div>
-        <h2>Drift Prediction</h2>
-        <p>Loading...</p>
-      </div>
-    );
-  }
+  useEffect(() => {
+    fetch("/api/drift")
+      .then((res) => res.json())
+      .then((json) => setChartData(json.data));
+  }, []);
 
   return (
     <div>
-      <h2>Drift Prediction</h2>
-      <p>Live Price: {data.price}</p>
-      <p>Predicted Price: {data.predicted}</p>
-      <p>Confidence: {data.confidence}</p>
-      <p>Anchors: {data.anchors.join(', ')}</p>
+      <h2 className="text-xl mb-2">Drift Data</h2>
+      <ul>
+        {chartData.map((d) => (
+          <li key={d.time}>
+            {d.time}: {d.value}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

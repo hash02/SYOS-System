@@ -6,8 +6,8 @@ import DriftChart from "./components/DriftChart";
 
 const App = () => {
   const dashboard = (
-    <div>
-      <h1>SYOS Dashboard</h1>
+    <div className="bg-base text-white min-h-screen px-8 py-6">
+      <h1 className="text-4xl font-bold text-anchor">SYOS Dashboard</h1>
       <WalletDisplay />
       <MemoryLog />
       <DriftChart />

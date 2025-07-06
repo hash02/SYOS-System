@@ -1,18 +1,9 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
-
-export default function handler(req: VercelRequest, res: VercelResponse) {
-  // Mocked drift data based on Codex plan example
-  const data = {
-    timeline: ['loop-1', 'loop-2'],
-    driftLogs: [
-      { drift: 0.2, correction: 'increase symbolic weight' },
-      { drift: -0.3, correction: 'reduce anchor priority' }
+export default function handler(req: any, res: any) {
+  res.status(200).json({
+    data: [
+      { time: "16:00", value: 0.15 },
+      { time: "16:30", value: 0.31 },
+      { time: "17:00", value: 0.27 },
     ],
-    agentActions: [
-      { time: 'T1', action: 'inject', rating: 0.9 },
-      { time: 'T2', action: 'visualize', rating: 1.0 }
-    ]
-  };
-
-  res.status(200).json(data);
+  });
 }
