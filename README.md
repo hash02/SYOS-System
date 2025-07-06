@@ -1,40 +1,56 @@
-# SYOS Core 🚀
+# SYOS System 🚀
 
-This is the core engine of the SYOS (Symbolic Yield Observation System).
+This repository contains the pieces that power the Symbolic Yield Observation System (SYOS). The focus of the project is the DApp frontend and the developer tools used to integrate symbolic memory logic.
 
 ## Structure
 
-- `core/`: core logic, candle analysis
-- `traits/`: symbolic trait memory maps
-- `logs/`: saved drifts, memory logs
-- `scripts/`: automation tools (pushers, editors)
-- `streamlit_dash/`: dashboard app
-- `notebooks/`: experiments + analysis
-- `data/`: datasets
+- `syos_dapp_ui/` – Vite + React dashboard for interacting with SYOS. Includes a small API folder for serverless functions.
+- `syos-vscode-extension/` – VS Code extension implementing SYOS features.
+- `SYOS_VSCode_Extension_Starter/` – minimal starter extension.
+- `syos_recursive_agent/` – TypeScript utilities for loop detection and drift management.
+- `syos_mcp_extended/` – documentation for the multi-context processor architecture.
+- `SYOS_Copilot_Prompt_Template_Pack/` – prompt templates for Copilot.
+- `Full_Copilot_Template_Pack/` – additional examples and hooks.
+- `SYOS_Logs/` – sample memory logs.
+- `SYOS_Prompt_Template_Integration/` – prompt integration examples.
+- `visualizer/` – placeholder for future visualization tools.
 
-## How to Run
+## Running the DApp
 
 ```bash
-python core/main.py
+cd syos_dapp_ui
+npm install        # install dependencies
+npm run dev        # start the Vite dev server at http://localhost:5173
 ```
+
+### Serverless functions
+
+Functions placed in `syos_dapp_ui/api` are deployed on Vercel under `/api/*`. To test them locally you can use the Vercel CLI:
+
+```bash
+npm install -g vercel  # if not already installed
+vercel dev             # run from within syos_dapp_ui
+```
+
+Then access endpoints like `http://localhost:3000/api/drift`.
 
 ## Codex Command Protocol
 
-🧠 Base Context:
+🧠 **Base Context**
 
 - Project: SYOS System DApp
 - Stack: React + Vite + TypeScript
 - Deployment: Vercel (Root: `/syos_dapp_ui`)
 - Status: Live at [syos-system-fin.vercel.app](https://syos-system-fin.vercel.app)
 
-🎯 Current Focus:
+🎯 **Current Focus**
 
 - Upgrade UI with active wallet display
 - Enable API connection to `/api/spiral`
 - Render symbolic memory logs & drift analytics
 - Prepare project for future Git branching
 
-🛠️ Codex: Start by running:
+🛠️ **Codex**: start by running
 
 ```bash
 git checkout -b feature/wallet-integration
