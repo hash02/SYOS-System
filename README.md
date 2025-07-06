@@ -76,3 +76,18 @@ Add these repository secrets so the workflow can authenticate:
 
 Once configured, pushes to `main` redeploy https://syos-system-fin.vercel.app.
 
+## Local Development & Deployment
+
+Run the dashboard locally with:
+
+```bash
+cd syos_dapp_ui
+npm install
+npm run dev
+# or create a production build
+npm run build
+```
+
+Deployments to Vercel read the `vercel.json` rewrite configuration so the React
+router, Tailwind styling and wallet adapters work together with the price chart.
+
