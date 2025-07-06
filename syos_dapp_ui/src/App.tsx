@@ -4,6 +4,7 @@ import WalletDisplay from "./components/WalletDisplay";
 import MemoryLog from "./components/MemoryLog";
 import DriftChart from "./components/DriftChart";
 import ChartComponent from "./components/ChartComponent";
+import PriceChart from "./components/PriceChart";
 import TradeExecutor from "./components/TradeExecutor";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <MemoryLog />
         <DriftChart />
         <ChartComponent />
+        <PriceChart />
         <TradeExecutor />
       </div>
     </div>
