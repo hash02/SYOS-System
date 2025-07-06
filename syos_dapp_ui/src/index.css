@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-bgDark text-neon font-neon;
+  @apply bg-background text-neon font-orbitron;
 }
