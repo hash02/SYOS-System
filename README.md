@@ -17,10 +17,15 @@ This repository contains the pieces that power the Symbolic Yield Observation Sy
 
 ## Running the DApp
 
+Make sure to install dependencies inside `syos_dapp_ui` before running
+`npm run dev` or `npm run build`. Vite is used as the build tool and is
+listed in the project's `devDependencies`.
+
 ```bash
 cd syos_dapp_ui
 npm install        # install dependencies
 npm run dev        # start the Vite dev server at http://localhost:5173
+# npm run build    # create a production build
 ```
 
 > **Note**: Run `npm install` in `syos_dapp_ui` before executing `npm run dev` or
