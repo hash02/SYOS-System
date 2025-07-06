@@ -12,9 +12,11 @@
     "@solana/wallet-adapter-wallets": "^0.19.37",
     "chart.js": "^4.5.0",
     "ethers": "^6.0.0",
+    "lightweight-charts": "^5.0.8",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^18.2.0",
+    "react-lightweight-charts": "^0.1.0",
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
