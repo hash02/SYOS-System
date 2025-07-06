@@ -30,14 +30,16 @@ export default function WalletDisplay() {
   }, []);
 
   return (
-    <div>
-      <h2>Wallet</h2>
+    <div className="bg-black/70 p-4 rounded-xl text-neon-lime border border-neon-pink">
+      <h2 className="text-neon-blue mb-2">Ethereum Wallet</h2>
       {account ? (
-        <p>Connected: {account}</p>
+        <p className="text-neon-purple break-all">Connected: {account}</p>
       ) : (
-        <button onClick={connect}>Connect Wallet</button>
+        <button className="px-4 py-1 rounded bg-neon-pink text-black" onClick={connect}>
+          Connect Wallet
+        </button>
       )}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="text-neon-orange mt-2">{error}</p>}
     </div>
   );
 }
